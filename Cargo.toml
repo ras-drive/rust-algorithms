@@ -1,5 +1,6 @@
 [workspace]
 
 members = [
-    "sort/bubble"
+    "sort/bubble",
+    "sort/merge",
 ]
