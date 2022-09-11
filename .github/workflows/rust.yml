@@ -10,27 +10,15 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  style:
-    name: Check Style
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Install rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: nightly
-          components: rustfmt
-          profile: minimal
-          override: true
-
-  build:
-
+  build:  
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
+    - name: Update local toolchain
+      run: |
+        rustup update
+        rustup install nightly   
     - name: Build
       run: cargo +nightly build --verbose
     - name: Run tests
