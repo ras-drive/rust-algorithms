@@ -4,5 +4,7 @@ members = [
     "sort/bubble",
     "sort/merge",
 
-    "search/linear"
+    "search/linear",
+
+    "structures/tree",
 ]
