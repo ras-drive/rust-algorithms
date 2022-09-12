@@ -1,6 +1,6 @@
 #![feature(test)]
 
-pub fn linear_search(vec: &Vec<i32>, target: i32) -> Option<usize> {
+pub fn linear_search(vec: &[i32], target: i32) -> Option<usize> {
     for (index, num) in vec.iter().enumerate() {
         if target == *num {
             return Some(index);
